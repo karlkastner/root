@@ -15,14 +15,14 @@ for idx=1:size(tab,1)
 		[stat, ret_str] = system(['svn info --show-item revision ',repo_str]);
 		rev_latest = str2num(ret_str);
 		if (rev_latest > rev)
-			printf(['Note: Newer revision available for repository ',repo_str,'\n']);
+			fprintf(['Note: Newer revision available for repository ',repo_str,'\n']);
 		end
 		%if (~exist(dir_str,'dir')
 			% check out
 			system(['svn checkout -r',rev_str,' ',repo_str,' ',dir_str]);
 		%end
 	else
-		printf(['Directory ',dir_str,' exists already, nothing to do\n']);
+		fprintf(['Directory ',dir_str,' exists already, nothing to do\n']);
 	end % else of if ~exist
 end % for idx
  
