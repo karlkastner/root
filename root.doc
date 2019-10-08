@@ -1,1 +1,46 @@
-Root directory
+Root folder of the source code belonging to the doctoral thesis:
+
+"Multi-Scale Monitoring and Modelling of the Kapuas River Delta", Karl Käster, 2019,
+
+and master thesis:
+
+"Computing the Spectrum of the Confined Hydrogen Atom", Karl Kästner, 2012.
+
+Copyright (C) 2010-2019 Karl Kästner
+
+Installation instructions:
+	
+1) Install Matlab
+2) Install subversion (svn) and add subversion to the search path, so that
+   it can be called from Matlab
+3) Checkout this umbrella-project:
+   svn checkout https://github.com/karlkastner/root/trunk root/
+4) Start Matlab
+5) Change into this directory ('root/')
+6) Run the Matlab script "startup" located in this directory
+
+The script then fetches the sub-repositories and adds them to the
+Matlab search path
+	
+Note:
+
+The code upload is work in progress, more parts will be subsequently
+documented, added and tested.
+
+This is experimental code. Use it wisely and at your own risk.
+
+Licence:
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
