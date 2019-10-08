@@ -5,5 +5,5 @@
 load_svn_externals();
 
 % add sub-repositories to search path
-addpath_recursive(['src/lib']);
+addpath_recursive(['./lib/']);
 

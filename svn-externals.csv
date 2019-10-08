@@ -1,6 +1,6 @@
-lib/tide		3	https://github.com/karlkastner/tide/trunk
-lib/mathematics		2	https://github.com/karlkastner/mathematics/trunk
-lib/pressure-gauge	2	https://github.com/karlkastner/pressure-gauge/trunk
-lib/sonar		3	https://github.com/karlkastner/sonar/trunk
+lib/tide				4	https://github.com/karlkastner/tide/trunk
+lib/mathematics				3	https://github.com/karlkastner/mathematics/trunk
+lib/instrumentation/pressure-gauge	3	https://github.com/karlkastner/pressure-gauge/trunk
+lib/instrumentation/sonar		4	https://github.com/karlkastner/sonar/trunk
 
 
