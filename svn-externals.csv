@@ -1,8 +1,10 @@
-lib/tide				4	https://github.com/karlkastner/tide/trunk
-lib/mathematics				3	https://github.com/karlkastner/mathematics/trunk
+lib/tide				6	https://github.com/karlkastner/tide/trunk
+lib/mathematics				4	https://github.com/karlkastner/mathematics/trunk
 lib/instrumentation/pressure-gauge	3	https://github.com/karlkastner/pressure-gauge/trunk
 lib/instrumentation/sonar		4	https://github.com/karlkastner/sonar/trunk
-lib/physics				2	https://github.com/karlkastner/physics/trunk
-lib/open-channel-flow			3	https://github.com/karlkastner/open-channel-flow/trunk
+lib/physics				3	https://github.com/karlkastner/physics/trunk
+lib/open-channel-flow			4	https://github.com/karlkastner/open-channel-flow/trunk
+lib/aux					3	https://github.com/karlkastner/aux/trunk
+lib/mesh				2	https://github.com/karlkastner/mesh/trunk
 
 
