@@ -5,9 +5,15 @@
 ROOTFOLDER();
 
 % fetch sub-repositories
-load_svn_externals();
+% load_svn_externals();
+% there is a matlab bug that makes calls to system commands unreliable,
+% so a perl script is called here as a workaround
+disp('fetching sub-repositories');
+ret_str = perl('load_svn_externals.pl');
+disp(ret_str);
 
 % add sub-repositories to search path
+disp('adding sub-directories to search path');
 addpath('.');
 addpath_recursive(['./lib/']);
 

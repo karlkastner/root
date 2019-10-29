@@ -11,12 +11,24 @@ for idx=1:size(tab,1)
 	rev_str  = num2str(rev);
 	repo_str = tab{idx,3}{1};
 	% trailing slash necessary, workaround for matlab bug detecting non-existing directories
+	cmd = ['svn info --show-item revision ',repo_str];
+	disp(cmd);
+	[stat, ret_str] = system(cmd);
+	disp(stat);
+	disp(ret_str);
+	if (stat > 0)
+		disp(ret_str);
+		error(sprintf('svn terminated with stat %d',stat));
+	end
+	rev_latest      = str2num(ret_str);
+	if (rev_latest > rev)
+		fprintf(['Note: Chosen revision %d of repository %s which is older than latest available revision %d\n'], rev, repo_str, rev_latest);
+	end
+	if (rev_latest < rev)
+		fprintf(['Note: Chosen revision %d of repository %s is higher than latest available revision %d\n'], rev, repo_str, rev_latest);
+		rev = rev_latest;
+	end
 	if (~exist([dir_str,'/'],'dir'))
-		[stat, ret_str] = system(['svn info --show-item revision ',repo_str]);
-		rev_latest = str2num(ret_str);
-		if (rev_latest > rev)
-			fprintf(['Note: Newer revision available for repository ',repo_str,'\n']);
-		end
 		%if (~exist(dir_str,'dir')
 			% check out
 			system(['svn checkout -r',rev_str,' ',repo_str,' ',dir_str]);

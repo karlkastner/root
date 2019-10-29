@@ -1,12 +1,12 @@
-lib/aux					5	https://github.com/karlkastner/aux/trunk
+lib/aux					6	https://github.com/karlkastner/aux/trunk
 lib/instrumentation/adcp		3	https://github.com/karlkastner/adcp/trunk
 lib/instrumentation/pressure-gauge	4	https://github.com/karlkastner/pressure-gauge/trunk
-lib/instrumentation/sonar		4	https://github.com/karlkastner/sonar/trunk
-lib/mathematics				5	https://github.com/karlkastner/mathematics/trunk
-lib/mesh				3	https://github.com/karlkastner/mesh/trunk
-lib/open-channel-flow			4	https://github.com/karlkastner/open-channel-flow/trunk
-lib/physics				4	https://github.com/karlkastner/physics/trunk
-lib/sediment-transport			3	https://github.com/karlkastner/sediment-transport/trunk
+lib/instrumentation/sonar		5	https://github.com/karlkastner/sonar/trunk
+lib/mathematics				7	https://github.com/karlkastner/mathematics/trunk
+lib/mesh				4	https://github.com/karlkastner/mesh/trunk
+lib/open-channel-flow			5	https://github.com/karlkastner/open-channel-flow/trunk
+lib/physics				5	https://github.com/karlkastner/physics/trunk
+lib/sediment-transport			4	https://github.com/karlkastner/sediment-transport/trunk
 lib/tide				6	https://github.com/karlkastner/tide/trunk
 sanggau					2	https://github.com/karlkastner/sanggau/trunk
 
