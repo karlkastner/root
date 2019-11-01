@@ -4,9 +4,9 @@ lib/instrumentation/pressure-gauge	4	https://github.com/karlkastner/pressure-gau
 lib/instrumentation/sonar		5	https://github.com/karlkastner/sonar/trunk
 lib/mathematics				7	https://github.com/karlkastner/mathematics/trunk
 lib/mesh				4	https://github.com/karlkastner/mesh/trunk
-lib/open-channel-flow			5	https://github.com/karlkastner/open-channel-flow/trunk
-lib/physics				5	https://github.com/karlkastner/physics/trunk
+lib/open-channel-flow			6	https://github.com/karlkastner/open-channel-flow/trunk
+lib/physics				6	https://github.com/karlkastner/physics/trunk
 lib/sediment-transport			4	https://github.com/karlkastner/sediment-transport/trunk
-lib/tide				6	https://github.com/karlkastner/tide/trunk
+lib/tide				7	https://github.com/karlkastner/tide/trunk
 sanggau					2	https://github.com/karlkastner/sanggau/trunk
 
