@@ -1,4 +1,4 @@
-lib/aux					6	https://github.com/karlkastner/aux/trunk
+lib/auxiliar				7	https://github.com/karlkastner/auxiliar/trunk
 lib/instrumentation/adcp		3	https://github.com/karlkastner/adcp/trunk
 lib/instrumentation/pressure-gauge	4	https://github.com/karlkastner/pressure-gauge/trunk
 lib/instrumentation/sonar		5	https://github.com/karlkastner/sonar/trunk
