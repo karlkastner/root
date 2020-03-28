@@ -8,6 +8,12 @@
 use strict;
 use warnings;
 
+my $fflag = 0;
+if ( $#ARGV >= 0)
+{
+	$fflag = $ARGV[0];
+}
+
 use Text::CSV;
 my $csv = Text::CSV->new({ sep_char => ';'});
 
@@ -18,7 +24,7 @@ open (my $file, "<", $file_str) or die "cannot open: $!";
 while (my $line = <$file>) {
     #print @row;
 	chomp $line;
-	$line =~ s/\t\t*/;/g;
+	$line =~ s/\s\s*/;/g;
 	if (length($line) > 0) {
 	if ($csv->parse($line))  {
  	      my @fields = $csv->fields();
@@ -44,14 +50,17 @@ while (my $line = <$file>) {
 				print 'Note: Chosen revision '.$rev_str.' of repository '.$repo_str.' is higher than latest available revision '.$ret_str."\n";
 				$rev_str = $ret_str;
 			}
-			$cmd = 'svn checkout --quiet -r'.$rev_str.' '.$repo_str.' '.$dir_str;
-			print $cmd."\n";
-			$ret_str = `$cmd`;
-			$stat = $?;
-			print $ret_str;
-			if (0 != $stat)
+			if ($fflag > 0)
 			{
-				die "svn checkout failed";
+				$cmd = 'svn checkout --quiet -r'.$rev_str.' '.$repo_str.' '.$dir_str;
+				print $cmd."\n";
+				$ret_str = `$cmd`;
+				$stat = $?;
+				print $ret_str;
+				if (0 != $stat)
+				{
+					die "svn checkout failed";
+				}
 			}
 		} else {
 			die "svn cannot get version number";

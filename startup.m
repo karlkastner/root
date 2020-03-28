@@ -9,7 +9,7 @@ ROOTFOLDER();
 % there is a matlab bug that makes calls to system commands unreliable,
 % so a perl script is called here as a workaround
 disp('fetching sub-repositories');
-ret_str = perl('load_svn_externals.pl');
+ret_str = perl('load_svn_externals.pl 1');
 disp(ret_str);
 
 % add sub-repositories to search path

@@ -3,6 +3,12 @@
 %
 %% script emulating svn:external, which is not supported by GitHub
 %
+function load_svn_externals(testflag)
+
+if (nargin()<1)
+	testflag = 0;
+end
+
 file_str = 'svn-externals.csv';
 tab = readtable(file_str,'HeaderLines',0,'Delimiter','tab','MultipleDelimsAsOne',1);
 for idx=1:size(tab,1)
@@ -28,6 +34,7 @@ for idx=1:size(tab,1)
 		fprintf(['Note: Chosen revision %d of repository %s is higher than latest available revision %d\n'], rev, repo_str, rev_latest);
 		rev = rev_latest;
 	end
+	if (~textflag)
 	if (~exist([dir_str,'/'],'dir'))
 		%if (~exist(dir_str,'dir')
 			% check out
@@ -36,5 +43,8 @@ for idx=1:size(tab,1)
 	else
 		fprintf(['Directory ',dir_str,' exists already, nothing to do\n']);
 	end % else of if ~exist
+	end
 end % for idx
- 
+
+end % function load_svn_externals
+
